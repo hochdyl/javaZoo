@@ -1,7 +1,7 @@
 package Zoo;
 
 import Animals.AnimalGender;
-import Animals.Types.*;
+import Animals.Reproduction.Species.*;
 import Helpers.randomHelper;
 
 public class Zoo {

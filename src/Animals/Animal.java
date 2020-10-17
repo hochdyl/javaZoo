@@ -11,8 +11,6 @@ public class Animal {
     public boolean awake = true;
     public AnimalHealth health = AnimalHealth.GOOD;
 
-    public Animal() { }
-
     public void Eat() {
         int new_hunger = this.hunger + 70;
         if (new_hunger > 100) new_hunger = 100;
@@ -54,16 +52,8 @@ public class Animal {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public AnimalGender getGender() {
         return gender;
-    }
-
-    public void setGender(AnimalGender gender) {
-        this.gender = gender;
     }
 
     public int getWeight() {
@@ -100,10 +90,6 @@ public class Animal {
 
     public boolean isAwake() {
         return awake;
-    }
-
-    public void setAwake(boolean awake) {
-        this.awake = awake;
     }
 
     public AnimalHealth getHealth() {

@@ -1,9 +1,9 @@
-package Animals.Types;
+package Animals.Reproduction.Species;
 
-import Animals.Animal;
 import Animals.AnimalGender;
+import Animals.Reproduction.Oviparous;
 
-public class Eagle extends Animal {
+public class Eagle extends Oviparous {
 
     public Eagle(AnimalGender gender, int weight, int size, int age, int[] birth) {
         this.type = "Eagle";

@@ -1,9 +1,9 @@
-package Animals.Types;
+package Animals.Reproduction.Species;
 
-import Animals.Animal;
 import Animals.AnimalGender;
+import Animals.Reproduction.Oviparous;
 
-public class Pinguin extends Animal {
+public class Pinguin extends Oviparous {
 
     public Pinguin(AnimalGender gender, int weight, int size, int age, int[] birth) {
         this.type = "Pinguin";

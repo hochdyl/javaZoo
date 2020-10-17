@@ -1,9 +1,9 @@
-package Animals.Types;
+package Animals.Reproduction.Species;
 
-import Animals.Animal;
 import Animals.AnimalGender;
+import Animals.Reproduction.Oviparous;
 
-public class Shark extends Animal {
+public class Shark extends Oviparous {
 
     public Shark(AnimalGender gender, int weight, int size, int age, int[] birth) {
         this.type = "Shark";
