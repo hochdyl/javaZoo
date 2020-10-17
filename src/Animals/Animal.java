@@ -6,31 +6,64 @@ public class Animal {
     public int weight;
     public int size;
     public int age;
+    public int birth[];
     public int hunger = 100;
-    public int sleep = 100;
+    public boolean awake = true;
     public AnimalHealth health = AnimalHealth.GOOD;
 
     public Animal() { }
 
+    public void Eat() {
+        int new_hunger = this.hunger + 70;
+        if (new_hunger > 100) new_hunger = 100;
+        this.hunger = new_hunger;
+    }
+
+    public void makeNoise() {
+        System.out.println("The " + this.type + " make a noise !");
+    }
+
+    public void beHealed() {
+        this.health = AnimalHealth.GOOD;
+    }
+
+    public void switchAwake() {
+        if (this.awake) this.awake = false;
+        else this.awake = true;
+    }
+
     public void aboutMe() {
-        String info = "";
+        String info = "============================\n";
         info += "Type of animal: " + this.type + "\n";
         info += "Gender of animal: " + this.gender + "\n";
+        if (this.gender == AnimalGender.FEMALE)
+        {
+            info += "Birth time of animal : " + this.birth[0] + "-" + this.birth[1] + " days\n";
+        }
         info += "Weight of animal: " + this.weight + "grams" + "\n";
         info += "Size of animal: " + this.size + "cm" + "\n";
         info += "Hunger status: " + this.hunger + "\n";
-        info += "Sleep status: " + this.sleep + "\n";
+        info += "Awake status: " + this.awake + "\n";
         info += "Health status: " + this.health + "\n";
+        info += "=============================\n";
 
         System.out.println(info);
     }
 
-    public void setGender(AnimalGender gender) {
-        this.gender = gender;
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public AnimalGender getGender() {
         return gender;
+    }
+
+    public void setGender(AnimalGender gender) {
+        this.gender = gender;
     }
 
     public int getWeight() {
@@ -65,12 +98,12 @@ public class Animal {
         this.hunger = hunger;
     }
 
-    public int getSleep() {
-        return sleep;
+    public boolean isAwake() {
+        return awake;
     }
 
-    public void setSleep(int sleep) {
-        this.sleep = sleep;
+    public void setAwake(boolean awake) {
+        this.awake = awake;
     }
 
     public AnimalHealth getHealth() {

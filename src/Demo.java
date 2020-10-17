@@ -7,6 +7,8 @@ public class Demo {
         Zoo zoo = new Zoo();
 
         Wolf wolf1 = zoo.addWolf();
+        wolf1.makeNoise();
+        wolf1.switchAwake();
         wolf1.aboutMe();
     }
 }
