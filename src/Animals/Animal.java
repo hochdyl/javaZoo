@@ -1,6 +1,8 @@
 package Animals;
 
-public class Animal {
+import Helpers.converterHelper;
+
+public abstract class Animal {
     public String type;
     public AnimalGender gender;
     public int weight;
@@ -38,8 +40,8 @@ public class Animal {
         {
             info += "Birth time of animal : " + this.birth[0] + "-" + this.birth[1] + " days\n";
         }
-        info += "Weight of animal: " + this.weight + "grams" + "\n";
-        info += "Size of animal: " + this.size + "cm" + "\n";
+        info += "Weight of animal: " + converterHelper.isGramOrKilogram(this.weight) + "\n";
+        info += "Size of animal: " + converterHelper.isCentimeterOrMeter(this.size) + "\n";
         info += "Hunger status: " + this.hunger + "\n";
         info += "Awake status: " + this.awake + "\n";
         info += "Health status: " + this.health + "\n";

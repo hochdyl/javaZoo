@@ -13,4 +13,5 @@ public class Wolf extends Viviparous {
         this.age = age;
         this.birth = birth;
     }
+
 }

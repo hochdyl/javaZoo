@@ -1,7 +1,7 @@
 import Zoo.Zoo;
 import Animals.Reproduction.Species.*;
 
-public class Demo {
+public class Launcher {
 
     public static void main(String[] args) {
         Zoo zoo = new Zoo();
@@ -9,7 +9,7 @@ public class Demo {
         Wolf wolf1 = zoo.addWolf();
         wolf1.makeNoise();
         wolf1.switchAwake();
-        wolf1.getBirth_type();
+        wolf1.carryPregnancy();
         wolf1.aboutMe();
     }
 }

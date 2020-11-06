@@ -2,7 +2,7 @@ package Helpers;
 
 import java.security.SecureRandom;
 
-public class randomHelper {
+public abstract class randomHelper {
 
     public static <T extends Enum<?>> T randomEnum(Class<T> c){
         SecureRandom r = new SecureRandom();
