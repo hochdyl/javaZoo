@@ -9,7 +9,11 @@ public class Launcher {
         Wolf wolf1 = zoo.addWolf();
         wolf1.makeNoise();
         wolf1.switchAwake();
-        wolf1.carryPregnancy();
         wolf1.aboutMe();
+
+        Bear bear1 = zoo.addBear();
+        bear1.makeNoise();
+        bear1.switchAwake();
+        bear1.aboutMe();
     }
 }

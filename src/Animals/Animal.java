@@ -3,24 +3,26 @@ package Animals;
 import Helpers.converterHelper;
 
 public abstract class Animal {
-    public String type;
+    public String species;
     public AnimalGender gender;
     public int weight;
-    public int size;
+    public int length;
     public int age;
-    public int birth[];
+    public int birth[]; // Nombre de jours avant une nouvelle naissance
     public int hunger = 100;
     public boolean awake = true;
     public AnimalHealth health = AnimalHealth.GOOD;
 
     public void Eat() {
-        int new_hunger = this.hunger + 70;
-        if (new_hunger > 100) new_hunger = 100;
-        this.hunger = new_hunger;
+        if (this.awake) {
+            int new_hunger = this.hunger + 70;
+            if (new_hunger > 100) new_hunger = 100;
+            this.hunger = new_hunger;
+        }
     }
 
     public void makeNoise() {
-        System.out.println("The " + this.type + " make a noise !");
+        if (this.awake) System.out.println("The " + this.species + " make a noise !");
     }
 
     public void beHealed() {
@@ -34,14 +36,14 @@ public abstract class Animal {
 
     public void aboutMe() {
         String info = "============================\n";
-        info += "Type of animal: " + this.type + "\n";
+        info += "Type of animal: " + this.species + "\n";
         info += "Gender of animal: " + this.gender + "\n";
         if (this.gender == AnimalGender.FEMALE)
         {
             info += "Birth time of animal : " + this.birth[0] + "-" + this.birth[1] + " days\n";
         }
         info += "Weight of animal: " + converterHelper.isGramOrKilogram(this.weight) + "\n";
-        info += "Size of animal: " + converterHelper.isCentimeterOrMeter(this.size) + "\n";
+        info += "Size of animal: " + converterHelper.isCentimeterOrMeter(this.length) + "\n";
         info += "Hunger status: " + this.hunger + "\n";
         info += "Awake status: " + this.awake + "\n";
         info += "Health status: " + this.health + "\n";
@@ -50,8 +52,8 @@ public abstract class Animal {
         System.out.println(info);
     }
 
-    public String getType() {
-        return type;
+    public String getSpecies() {
+        return species;
     }
 
     public AnimalGender getGender() {
@@ -66,12 +68,12 @@ public abstract class Animal {
         this.weight = weight;
     }
 
-    public int getSize() {
-        return size;
+    public int getLenght() {
+        return length;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public void setLenght(int length) {
+        this.length = length;
     }
 
     public int getAge() {
