@@ -17,6 +17,11 @@ public class Eagle extends Animal implements Oviparous, Fly {
     }
 
     @Override
+    public void layEgg() {
+
+    }
+
+    @Override
     public void Fly() {
 
     }

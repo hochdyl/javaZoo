@@ -17,6 +17,11 @@ public class Tiger extends Animal implements Viviparous, Wander {
     }
 
     @Override
+    public void giveBirth() {
+
+    }
+
+    @Override
     public void Wander() {
 
     }

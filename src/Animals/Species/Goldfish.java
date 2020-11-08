@@ -17,6 +17,11 @@ public class Goldfish extends Animal implements Oviparous, Swim {
     }
 
     @Override
+    public void layEgg() {
+
+    }
+
+    @Override
     public void Swim() {
 
     }

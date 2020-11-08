@@ -14,4 +14,9 @@ public class Bear extends Animal implements Viviparous {
         this.age = age;
         this.birth = birth;
     }
+
+    @Override
+    public void giveBirth() {
+
+    }
 }

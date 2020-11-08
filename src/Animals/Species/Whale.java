@@ -17,6 +17,11 @@ public class Whale extends Animal implements Viviparous, Swim {
     }
 
     @Override
+    public void giveBirth() {
+
+    }
+
+    @Override
     public void Swim() {
 
     }

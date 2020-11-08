@@ -17,6 +17,11 @@ public class Wolf extends Animal implements Viviparous, Wander {
     }
 
     @Override
+    public void giveBirth() {
+
+    }
+
+    @Override
     public void Wander() {
 
     }

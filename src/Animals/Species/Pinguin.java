@@ -18,6 +18,11 @@ public class Pinguin extends Animal implements Oviparous, Fly, Swim {
     }
 
     @Override
+    public void layEgg() {
+
+    }
+    
+    @Override
     public void Fly() {
 
     }
