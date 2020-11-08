@@ -1,9 +1,10 @@
-package Animals.Reproduction.Species;
+package Animals.Species;
 
+import Animals.Animal;
 import Animals.AnimalGender;
 import Animals.Reproduction.Viviparous;
 
-public class Whale extends Viviparous {
+public class Whale extends Animal implements Viviparous {
 
     public Whale(AnimalGender gender, int weight, int size, int age, int[] birth) {
         this.type = "Whale";
