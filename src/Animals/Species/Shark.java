@@ -7,7 +7,8 @@ import Animals.Reproduction.Oviparous;
 
 public class Shark extends Animal implements Oviparous, Swim {
 
-    public Shark(AnimalGender gender, int weight, int length, int age, int[] birth) {
+    public Shark(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
+        this.id = id;
         this.species = "Shark";
         this.gender = gender;
         this.weight = weight;
@@ -22,7 +23,7 @@ public class Shark extends Animal implements Oviparous, Swim {
     }
 
     @Override
-    public void Swim() {
+    public void swim() {
 
     }
 }

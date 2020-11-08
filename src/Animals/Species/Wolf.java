@@ -7,7 +7,8 @@ import Animals.Reproduction.Viviparous;
 
 public class Wolf extends Animal implements Viviparous, Wander {
 
-    public Wolf(AnimalGender gender, int weight, int length, int age, int[] birth) {
+    public Wolf(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
+        this.id = id;
         this.species = "Wolf";
         this.gender = gender;
         this.weight = weight;
@@ -22,7 +23,7 @@ public class Wolf extends Animal implements Viviparous, Wander {
     }
 
     @Override
-    public void Wander() {
-
+    public void wander() {
+        if (this.awake) System.out.println("The " + this.species + " is wandering !");
     }
 }

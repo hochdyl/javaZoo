@@ -8,7 +8,8 @@ import Animals.Reproduction.Oviparous;
 
 public class Pinguin extends Animal implements Oviparous, Fly, Swim {
 
-    public Pinguin(AnimalGender gender, int weight, int length, int age, int[] birth) {
+    public Pinguin(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
+        this.id = id;
         this.species = "Pinguin";
         this.gender = gender;
         this.weight = weight;
@@ -21,14 +22,14 @@ public class Pinguin extends Animal implements Oviparous, Fly, Swim {
     public void layEgg() {
 
     }
-    
+
     @Override
-    public void Fly() {
+    public void fly() {
 
     }
 
     @Override
-    public void Swim() {
+    public void swim() {
 
     }
 }

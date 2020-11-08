@@ -6,7 +6,8 @@ import Animals.Reproduction.Viviparous;
 
 public class Bear extends Animal implements Viviparous {
 
-    public Bear(AnimalGender gender, int weight, int length, int age, int[] birth) {
+    public Bear(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
+        this.id = id;
         this.species = "Bear";
         this.gender = gender;
         this.weight = weight;

@@ -7,7 +7,8 @@ import Animals.Reproduction.Viviparous;
 
 public class Whale extends Animal implements Viviparous, Swim {
 
-    public Whale(AnimalGender gender, int weight, int length, int age, int[] birth) {
+    public Whale(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
+        this.id = id;
         this.species = "Whale";
         this.gender = gender;
         this.weight = weight;
@@ -22,7 +23,7 @@ public class Whale extends Animal implements Viviparous, Swim {
     }
 
     @Override
-    public void Swim() {
+    public void swim() {
 
     }
 }

@@ -3,6 +3,7 @@ package Animals;
 import Helpers.converterHelper;
 
 public abstract class Animal {
+    public int id;
     public String species;
     public AnimalGender gender;
     public int weight;
@@ -36,6 +37,7 @@ public abstract class Animal {
 
     public void aboutMe() {
         String info = "============================\n";
+        info += "Id of animal: " + this.id + "\n";
         info += "Type of animal: " + this.species + "\n";
         info += "Gender of animal: " + this.gender + "\n";
         if (this.gender == AnimalGender.FEMALE)
@@ -50,6 +52,11 @@ public abstract class Animal {
         info += "=============================\n";
 
         System.out.println(info);
+    }
+
+
+    public int getId() {
+        return id;
     }
 
     public String getSpecies() {
@@ -92,7 +99,7 @@ public abstract class Animal {
         this.hunger = hunger;
     }
 
-    public boolean isAwake() {
+    public boolean getAwake() {
         return awake;
     }
 

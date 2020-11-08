@@ -7,7 +7,8 @@ import Animals.Reproduction.Oviparous;
 
 public class Eagle extends Animal implements Oviparous, Fly {
 
-    public Eagle(AnimalGender gender, int weight, int length, int age, int[] birth) {
+    public Eagle(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
+        this.id = id;
         this.species = "Eagle";
         this.gender = gender;
         this.weight = weight;
@@ -22,7 +23,7 @@ public class Eagle extends Animal implements Oviparous, Fly {
     }
 
     @Override
-    public void Fly() {
+    public void fly() {
 
     }
 }

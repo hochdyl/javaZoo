@@ -8,12 +8,14 @@ public class Launcher {
 
         Wolf wolf1 = zoo.addWolf();
         wolf1.makeNoise();
+        wolf1.wander();
         wolf1.switchAwake();
         wolf1.aboutMe();
 
-        Bear bear1 = zoo.addBear();
-        bear1.makeNoise();
-        bear1.switchAwake();
-        bear1.aboutMe();
+        Wolf wolf2 = zoo.addWolf();
+        wolf2.makeNoise();
+        wolf2.wander();
+        wolf2.switchAwake();
+        wolf2.aboutMe();
     }
 }

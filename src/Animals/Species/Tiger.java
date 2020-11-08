@@ -7,7 +7,8 @@ import Animals.Reproduction.Viviparous;
 
 public class Tiger extends Animal implements Viviparous, Wander {
 
-    public Tiger(AnimalGender gender, int weight, int length, int age, int[] birth) {
+    public Tiger(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
+        this.id = id;
         this.species = "Tiger";
         this.gender = gender;
         this.weight = weight;
@@ -22,7 +23,7 @@ public class Tiger extends Animal implements Viviparous, Wander {
     }
 
     @Override
-    public void Wander() {
+    public void wander() {
 
     }
 }
