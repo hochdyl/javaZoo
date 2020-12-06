@@ -2,8 +2,8 @@ package Animals.Species;
 
 import Animals.Animal;
 import Animals.AnimalGender;
-import Animals.Behaviour.Swim;
-import Animals.Reproduction.Viviparous;
+import Animals.Behaviours.Swim;
+import Animals.Reproductions.Viviparous;
 
 public class Whale extends Animal implements Viviparous, Swim {
 

@@ -2,9 +2,9 @@ package Animals.Species;
 
 import Animals.Animal;
 import Animals.AnimalGender;
-import Animals.Behaviour.Fly;
-import Animals.Behaviour.Swim;
-import Animals.Reproduction.Oviparous;
+import Animals.Behaviours.Fly;
+import Animals.Behaviours.Swim;
+import Animals.Reproductions.Oviparous;
 
 public class Pinguin extends Animal implements Oviparous, Fly, Swim {
 

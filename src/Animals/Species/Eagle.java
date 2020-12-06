@@ -2,8 +2,8 @@ package Animals.Species;
 
 import Animals.Animal;
 import Animals.AnimalGender;
-import Animals.Behaviour.Fly;
-import Animals.Reproduction.Oviparous;
+import Animals.Behaviours.Fly;
+import Animals.Reproductions.Oviparous;
 
 public class Eagle extends Animal implements Oviparous, Fly {
 

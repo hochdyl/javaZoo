@@ -59,6 +59,10 @@ public abstract class Animal {
         return id;
     }
 
+    public void addAnimalInEnclos(Animal theAnimal) {
+        
+    }
+
     public String getSpecies() {
         return species;
     }

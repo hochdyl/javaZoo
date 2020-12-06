@@ -2,8 +2,8 @@ package Animals.Species;
 
 import Animals.Animal;
 import Animals.AnimalGender;
-import Animals.Behaviour.Wander;
-import Animals.Reproduction.Viviparous;
+import Animals.Behaviours.Wander;
+import Animals.Reproductions.Viviparous;
 
 public class Tiger extends Animal implements Viviparous, Wander {
 

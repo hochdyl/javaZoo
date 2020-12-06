@@ -7,8 +7,7 @@ import Helpers.randomHelper;
 public class Zoo {
     public int id = 0;
 
-    public Zoo() {
-    }
+    public Zoo() { }
 
     public Wolf addWolf() {
         this.id += 1;

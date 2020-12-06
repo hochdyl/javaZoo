@@ -2,7 +2,7 @@ package Animals.Species;
 
 import Animals.Animal;
 import Animals.AnimalGender;
-import Animals.Reproduction.Viviparous;
+import Animals.Reproductions.Viviparous;
 
 public class Bear extends Animal implements Viviparous {
 

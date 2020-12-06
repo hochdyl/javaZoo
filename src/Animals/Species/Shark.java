@@ -2,8 +2,8 @@ package Animals.Species;
 
 import Animals.Animal;
 import Animals.AnimalGender;
-import Animals.Behaviour.Swim;
-import Animals.Reproduction.Oviparous;
+import Animals.Behaviours.Swim;
+import Animals.Reproductions.Oviparous;
 
 public class Shark extends Animal implements Oviparous, Swim {
 
