@@ -1,6 +1,7 @@
 package Enclosures;
 
 import Animals.Animal;
+
 import java.util.List;
 
 public abstract class Enclosure {

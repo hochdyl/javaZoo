@@ -2,12 +2,63 @@ package Zoo;
 
 import Animals.AnimalGender;
 import Animals.Species.*;
+import Enclosures.Enclosure;
+import Helpers.colorHelper;
 import Helpers.randomHelper;
+
+import java.util.List;
+import java.util.Scanner;
 
 public class Zoo {
     public int id = 0;
+    public String name;
+    public Employee employee;
+    public int maxEnclosures;
+    public List<Enclosure> enclosureList;
 
-    public Zoo() { }
+    public Zoo() {
+        int selection;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Entrer le nom du zoo : ");
+        this.name = input.next();
+        System.out.println("Vous commencerez avec 3 enclos. Pas de panique, vous pourrez en ajouter plus tard !");
+        this.maxEnclosures = 3;
+        System.out.println();
+
+        System.out.println("Passons maintenant à votre employé");
+        System.out.println("Est-ce un homme ou une femme ? (Selectionner le numéro correspondant)");
+        System.out.println("--------------------");
+        System.out.println("1 - Homme");
+        System.out.println("2 - Femme");
+        System.out.println("--------------------");
+        System.out.print("Votre choix : ");
+        int value = input.nextInt();
+        while (value < 1 || value > 2) {
+            System.out.println(colorHelper.textRed("Erreur : Séléctionner un nombre entre 1 et 2"));
+            System.out.print("Votre choix : ");
+            value = input.nextInt();
+        }
+        EmployeeGender gender = value == 1 ? EmployeeGender.MALE : EmployeeGender.FEMALE;
+        System.out.println();
+
+        System.out.print("Quel est son nom : ");
+        String name = input.next();
+        System.out.println();
+
+        System.out.println("C'est noté ! Quel age de "+name+" ? (Compris entre 18 et 99)");
+        System.out.print("Age de "+name+" : ");
+        int age = input.nextInt();
+        while (age < 18 || age > 99) {
+            System.out.println(colorHelper.textRed("Erreur : Séléctionner un nombre entre 18 et 99"));
+            System.out.print("Age de "+name+" : ");
+            age = input.nextInt();
+        }
+        System.out.println();
+
+        System.out.println("Parfait, on s'occupe d'ajouter "+name+" à votre nouveau zoo.");
+        this.employee = new Employee(name,gender,age);
+    }
 
     public Wolf addWolf() {
         this.id += 1;
