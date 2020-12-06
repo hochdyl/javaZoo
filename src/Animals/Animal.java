@@ -1,6 +1,7 @@
 package Animals;
 
 import Enclosures.Enclosure;
+import Helpers.colorHelper;
 import Helpers.converterHelper;
 
 public abstract class Animal {
@@ -10,11 +11,13 @@ public abstract class Animal {
     public int weight;
     public int length;
     public int age;
-    public int birth[]; // Nombre de jours avant une nouvelle naissance
+    public int birth[];
     public int hunger = 100;
     public boolean awake = true;
     public AnimalHealth health = AnimalHealth.GOOD;
     public Enclosure enclosure;
+
+    public Animal() {}
 
     public void Eat() {
         if (this.awake) {
@@ -25,20 +28,34 @@ public abstract class Animal {
     }
 
     public void makeNoise() {
-        if (this.awake) System.out.println("The " + this.species + " make a noise !");
+        if (this.awake) {
+            System.out.println(colorHelper.textYellow("L'animal à fait un bruit !"));
+        } else {
+            System.out.println(colorHelper.textYellow("L'animal ne peut pas faire de bruit, il dort !'"));
+        }
     }
 
     public void beHealed() {
         this.health = AnimalHealth.GOOD;
+        System.out.println(colorHelper.textYellow("L'animal a été soigné'"));
     }
 
     public void switchAwake() {
-        if (this.awake) this.awake = false;
-        else this.awake = true;
+        if (this.awake) {
+            this.awake = false;
+            System.out.println(colorHelper.textYellow("L'animal s'endort !'"));
+        }
+        else {
+            this.awake = true;
+            System.out.println(colorHelper.textYellow("L'animal se reveil !"));
+        }
     }
 
     public void aboutMe() {
-        String info = "L'id de l'animal: " + this.id + "\n";
+        System.out.println();
+        String info = "Informations sur l'animal\n";
+        info += "--------------------\n";
+        info += "L'id de l'animal: " + this.id + "\n";
         info += "Espèce de l'animal: " + this.species + "\n";
         info += "Genre de l'animal: " + this.gender + "\n";
         if (this.gender == AnimalGender.FEMALE)
@@ -50,16 +67,12 @@ public abstract class Animal {
         info += "Faim de l'animal: " + this.hunger + "\n";
         info += "L'animal est réveiller : " + this.awake + "\n";
         info += "Etat de santé de l'animal: " + this.health + "\n";
+        info += "--------------------";
         System.out.println(info);
-        System.out.println();
     }
 
     public int getId() {
         return id;
-    }
-
-    public void addAnimalInEnclos(Animal theAnimal) {
-        
     }
 
     public String getSpecies() {
@@ -70,48 +83,12 @@ public abstract class Animal {
         return gender;
     }
 
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
-    public int getLenght() {
-        return length;
-    }
-
-    public void setLenght(int length) {
-        this.length = length;
-    }
-
     public int getAge() {
         return age;
     }
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public int getHunger() {
-        return hunger;
-    }
-
-    public void setHunger(int hunger) {
-        this.hunger = hunger;
-    }
-
-    public boolean getAwake() {
-        return awake;
-    }
-
-    public AnimalHealth getHealth() {
-        return health;
-    }
-
-    public void setHealth(AnimalHealth health) {
-        this.health = health;
     }
 
     public Enclosure getEnclosure() {

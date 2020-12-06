@@ -4,6 +4,7 @@ import Animals.Species.Eagle;
 import Enclosures.Categories.Birdcage;
 import Enclosures.Categories.BirdcageRoofState;
 import Enclosures.Enclosure;
+import Helpers.colorHelper;
 
 public class EagleEnclosure extends Enclosure implements Birdcage {
     public int height;
@@ -35,13 +36,14 @@ public class EagleEnclosure extends Enclosure implements Birdcage {
 
     @Override
     public void maintains() {
-        super.maintains();
-        repairRoof();
-    }
-
-    @Override
-    public void getRoofState() {
-        System.out.println(this.roofState);
+        if (this.animalList.isEmpty()) {
+            clean();
+            System.out.println(colorHelper.textYellow("L'enclos a bien été nettoyer"));
+            repairRoof();
+            System.out.println(colorHelper.textYellow("Le toit de l'enclos a bien été réparer"));
+        } else {
+            System.out.println(colorHelper.textRed("L'enclos n'est pas vide !"));
+        }
     }
 
     @Override

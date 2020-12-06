@@ -3,6 +3,7 @@ package Enclosures.Types;
 import Animals.Species.Pinguin;
 import Enclosures.Categories.*;
 import Enclosures.Enclosure;
+import Helpers.colorHelper;
 
 public class PinguinEnclosure extends Enclosure implements Aquarium, Birdcage {
     public AquariumWaterDepth waterDepth = AquariumWaterDepth.GOOD;
@@ -36,15 +37,18 @@ public class PinguinEnclosure extends Enclosure implements Aquarium, Birdcage {
 
     @Override
     public void maintains() {
-        super.maintains();
-        fixWaterDepth();
-        fixWaterSalinity();
-        repairRoof();
-    }
-
-    @Override
-    public void getWaterDepth() {
-        System.out.println(this.waterDepth);
+        if (this.animalList.isEmpty()) {
+            clean();
+            System.out.println(colorHelper.textYellow("L'enclos a bien été nettoyer"));
+            repairRoof();
+            System.out.println(colorHelper.textYellow("Le toit de l'enclos a bien été réparer"));
+            fixWaterDepth();
+            System.out.println(colorHelper.textYellow("Le niveau de l'eau a bien été ajustée"));
+            fixWaterSalinity();
+            System.out.println(colorHelper.textYellow("La salinité de l'eau a bien été ajustée"));
+        } else {
+            System.out.println(colorHelper.textRed("L'enclos n'est pas vide !"));
+        }
     }
 
     @Override
@@ -53,18 +57,8 @@ public class PinguinEnclosure extends Enclosure implements Aquarium, Birdcage {
     }
 
     @Override
-    public void getWaterSalinity() {
-        System.out.println(this.waterSalinity);
-    }
-
-    @Override
     public void fixWaterSalinity() {
         this.waterSalinity = AquariumWaterSalinity.GOOD;
-    }
-
-    @Override
-    public void getRoofState() {
-        System.out.println(this.roofState);
     }
 
     @Override

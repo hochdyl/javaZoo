@@ -5,6 +5,7 @@ import Enclosures.Categories.Aquarium;
 import Enclosures.Categories.AquariumWaterDepth;
 import Enclosures.Categories.AquariumWaterSalinity;
 import Enclosures.Enclosure;
+import Helpers.colorHelper;
 
 public class GoldfishEnclosure extends Enclosure implements Aquarium {
     public AquariumWaterDepth waterDepth = AquariumWaterDepth.GOOD;
@@ -35,24 +36,21 @@ public class GoldfishEnclosure extends Enclosure implements Aquarium {
 
     @Override
     public void maintains() {
-        super.maintains();
-        fixWaterDepth();
-        fixWaterSalinity();
-    }
-
-    @Override
-    public void getWaterDepth() {
-        System.out.println(this.waterDepth);
+        if (this.animalList.isEmpty()) {
+            clean();
+            System.out.println(colorHelper.textYellow("L'enclos a bien été nettoyer"));
+            fixWaterDepth();
+            System.out.println(colorHelper.textYellow("Le niveau de l'eau a bien été ajustée"));
+            fixWaterSalinity();
+            System.out.println(colorHelper.textYellow("La salinité de l'eau a bien été ajustée"));
+        } else {
+            System.out.println(colorHelper.textRed("L'enclos n'est pas vide !"));
+        }
     }
 
     @Override
     public void fixWaterDepth() {
         this.waterDepth = AquariumWaterDepth.GOOD;
-    }
-
-    @Override
-    public void getWaterSalinity() {
-        System.out.println(this.waterSalinity);
     }
 
     @Override
