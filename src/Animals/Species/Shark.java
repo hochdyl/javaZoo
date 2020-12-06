@@ -9,7 +9,7 @@ public class Shark extends Animal implements Oviparous, Swim {
 
     public Shark(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
         this.id = id;
-        this.species = "Shark";
+        this.species = "Requin";
         this.gender = gender;
         this.weight = weight;
         this.length = length;

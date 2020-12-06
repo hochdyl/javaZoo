@@ -15,7 +15,6 @@ public class GoldfishEnclosure extends Enclosure implements Aquarium {
         this.name = name;
         this.area = area;
         this.maxAnimals = maxAnimals;
-        this.numberAnimals = 0;
     }
 
     public void add(Goldfish animal) {

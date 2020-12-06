@@ -9,7 +9,7 @@ public class Tiger extends Animal implements Viviparous, Wander {
 
     public Tiger(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
         this.id = id;
-        this.species = "Tiger";
+        this.species = "Tigre";
         this.gender = gender;
         this.weight = weight;
         this.length = length;

@@ -1,6 +1,5 @@
 package Zoo;
 
-import Animals.AnimalGender;
 import Helpers.colorHelper;
 
 public class Employee {

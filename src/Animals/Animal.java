@@ -1,5 +1,6 @@
 package Animals;
 
+import Enclosures.Enclosure;
 import Helpers.converterHelper;
 
 public abstract class Animal {
@@ -13,6 +14,7 @@ public abstract class Animal {
     public int hunger = 100;
     public boolean awake = true;
     public AnimalHealth health = AnimalHealth.GOOD;
+    public Enclosure enclosure;
 
     public void Eat() {
         if (this.awake) {
@@ -36,24 +38,21 @@ public abstract class Animal {
     }
 
     public void aboutMe() {
-        String info = "============================\n";
-        info += "Id of animal: " + this.id + "\n";
-        info += "Type of animal: " + this.species + "\n";
-        info += "Gender of animal: " + this.gender + "\n";
+        String info = "L'id de l'animal: " + this.id + "\n";
+        info += "Espèce de l'animal: " + this.species + "\n";
+        info += "Genre de l'animal: " + this.gender + "\n";
         if (this.gender == AnimalGender.FEMALE)
         {
-            info += "Birth time of animal : " + this.birth[0] + "-" + this.birth[1] + " days\n";
+            info += "Nouvelle naissance : " + this.birth[0] + "-" + this.birth[1] + " Jours\n";
         }
-        info += "Weight of animal: " + converterHelper.isGramOrKilogram(this.weight) + "\n";
-        info += "Size of animal: " + converterHelper.isCentimeterOrMeter(this.length) + "\n";
-        info += "Hunger status: " + this.hunger + "\n";
-        info += "Awake status: " + this.awake + "\n";
-        info += "Health status: " + this.health + "\n";
-        info += "=============================\n";
-
+        info += "Poids de l'animal: " + converterHelper.isGramOrKilogram(this.weight) + "\n";
+        info += "Taille de l'animal: " + converterHelper.isCentimeterOrMeter(this.length) + "\n";
+        info += "Faim de l'animal: " + this.hunger + "\n";
+        info += "L'animal est réveiller : " + this.awake + "\n";
+        info += "Etat de santé de l'animal: " + this.health + "\n";
         System.out.println(info);
+        System.out.println();
     }
-
 
     public int getId() {
         return id;
@@ -113,5 +112,9 @@ public abstract class Animal {
 
     public void setHealth(AnimalHealth health) {
         this.health = health;
+    }
+
+    public Enclosure getEnclosure() {
+        return enclosure;
     }
 }

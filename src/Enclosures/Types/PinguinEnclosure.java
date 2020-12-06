@@ -15,7 +15,6 @@ public class PinguinEnclosure extends Enclosure implements Aquarium, Birdcage {
         this.name = name;
         this.area = area;
         this.maxAnimals = maxAnimals;
-        this.numberAnimals = 0;
         this.height = height;
     }
 

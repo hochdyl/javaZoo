@@ -9,7 +9,7 @@ public class Whale extends Animal implements Viviparous, Swim {
 
     public Whale(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
         this.id = id;
-        this.species = "Whale";
+        this.species = "Baleine";
         this.gender = gender;
         this.weight = weight;
         this.length = length;

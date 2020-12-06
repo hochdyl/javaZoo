@@ -10,7 +10,7 @@ public class Pinguin extends Animal implements Oviparous, Fly, Swim {
 
     public Pinguin(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
         this.id = id;
-        this.species = "Pinguin";
+        this.species = "Pingouin";
         this.gender = gender;
         this.weight = weight;
         this.length = length;

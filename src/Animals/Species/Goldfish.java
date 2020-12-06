@@ -9,7 +9,7 @@ public class Goldfish extends Animal implements Oviparous, Swim {
 
     public Goldfish(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
         this.id = id;
-        this.species = "Goldfish";
+        this.species = "Poisson rouge";
         this.gender = gender;
         this.weight = weight;
         this.length = length;

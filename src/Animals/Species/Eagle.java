@@ -9,7 +9,7 @@ public class Eagle extends Animal implements Oviparous, Fly {
 
     public Eagle(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
         this.id = id;
-        this.species = "Eagle";
+        this.species = "Aigle";
         this.gender = gender;
         this.weight = weight;
         this.length = length;

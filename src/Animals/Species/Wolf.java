@@ -9,7 +9,7 @@ public class Wolf extends Animal implements Viviparous, Wander {
 
     public Wolf(int id, AnimalGender gender, int weight, int length, int age, int[] birth) {
         this.id = id;
-        this.species = "Wolf";
+        this.species = "Loup";
         this.gender = gender;
         this.weight = weight;
         this.length = length;

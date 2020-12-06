@@ -1,7 +1,10 @@
 package Enclosures;
 
 import Animals.Animal;
+import Animals.AnimalGender;
+import Helpers.converterHelper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Enclosure {
@@ -9,22 +12,18 @@ public abstract class Enclosure {
     public String name;
     public float area;
     public int maxAnimals;
-    public int numberAnimals;
-    public List<Animal> animalList;
+    public List<Animal> animalList = new ArrayList<>();
     public EnclosureCleanliness cleanliness = EnclosureCleanliness.GOOD;
 
     public void aboutMe() {
-        String info = "============================\n";
-        info += "Id of enclosure: " + this.id + "\n";
-        info += "Name of enclosure: " + this.name + "\n";
-        info += "Area of enclosure: " + this.area + "\n";
-        info += "Max amount of animals: " + this.maxAnimals + "\n";
-        info += "Number of animals: " + this.numberAnimals + "\n";
-        info += "List of animals: " + this.animalList + "\n";
-        info += "Cleanliness of enclosure: " + this.cleanliness + "\n";
-        info += "=============================\n";
-
+        String info = "L'id de l'enclos: " + this.id + "\n";
+        info += "Le nom de l'enclos: " + this.name + "\n";
+        info += "La surface de l'enclos: " + this.area + "m\n";
+        info += "Nombre maximum d'animaux: "+this.maxAnimals+"\n";
+        info += "Nombre d'animaux: " + this.animalList.size() + "\n";
+        info += "Etat de l'enclos: " + this.cleanliness + "\n";
         System.out.println(info);
+        System.out.println();
     }
 
     public void maintains() {
@@ -69,14 +68,6 @@ public abstract class Enclosure {
 
     public void setMaxAnimals(int maxAnimals) {
         this.maxAnimals = maxAnimals;
-    }
-
-    public int getNumberAnimals() {
-        return numberAnimals;
-    }
-
-    public void setNumberAnimals(int numberAnimals) {
-        this.numberAnimals = numberAnimals;
     }
 
     public List<Animal> getAnimalList() {

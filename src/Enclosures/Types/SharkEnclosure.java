@@ -15,7 +15,6 @@ public class SharkEnclosure extends Enclosure implements Aquarium {
         this.name = name;
         this.area = area;
         this.maxAnimals = maxAnimals;
-        this.numberAnimals = 0;
     }
 
     public void add(Shark animal) {
